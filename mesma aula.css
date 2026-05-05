@@ -1,0 +1,146 @@
+body {background-image: url(https://i.pinimg.com/1200x/71/bd/5c/71bd5c6fdb78141975ec81ae1e62c2b1.jpg);
+margin: 0; padding: 0; text-align: center;
+background-size:cover; background-repeat: no-repeat}
+
+
+img {justify-content: center;
+justify-items: center; padding-top: 50px;}
+
+
+h1{font-family: 'Times New Roman', Times, serif;
+font-size: 80px;
+text-align: center;}
+
+
+h2{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 50px;
+text-align: center;color: white;}
+
+
+p{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 30px;
+text-align: center;
+padding-left: 25px;
+padding-right: 25px;}
+
+
+button{ background-color: darkred; transition: 0.2ms;
+text-align: center;}
+
+
+h3 {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 50px; color: white; text-align: justify; margin: 10px; padding: 20px;}
+
+h4 {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px; color: white; text-align: justify; margin: 10px; padding: 25px;}
+
+    h5{font-size: 35px;}
+
+
+ul {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 30px;
+text-align:justify; color: white; margin: 10px;}
+
+ul a:hover {color: green;}
+
+button {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 23px;
+    text-align:justify; color: white; margin: 10px;}
+
+.button:hover {color: white}
+
+.btn-instagram {
+    color: green;
+    transition: transform 0.3s ease;
+}
+
+.btn-instagram:hover {
+    transform: scale(1.15);
+}
+
+section{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    text-align: center; color: darkred;}
+
+.galeria {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;}
+.jogador {
+    text-align: center;
+    color: white;}
+.jogador img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;}
+.jogador p {
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: bold;}
+.galeria img:hover {
+    transform: scale(1.1);}
+
+
+
+
+    nav {
+        margin: 0;
+        height: 170px;
+        background: linear-gradient(
+          to bottom,
+          darkred 30%,
+          darkred 49.5%,
+          white 49.5%,
+          white 53.5%,
+          darkgreen 50.5%,
+          green 100%
+        );
+     padding: 15px; 
+    width: 100%;
+top: 0;
+left: 0;
+text-align: center;}
+
+nav ul {
+    margin: -5px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+nav ul li {
+    margin: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: solid;
+    text-decoration: underline;
+    font-size: 35px;
+
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+td, th { color: white;
+    border: 3px solid white;
+    padding: 10px;
+}
+
+
+    form{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 30px; color: white; text-align: justify; margin: 10px; padding: 10px;}
+
+.btn-form:hover {transform: scale(1.15); transition: transform 0.3s ease;}
+
+        footer{background: darkred;
+        padding: 20px; 
+    color: white;}
+
