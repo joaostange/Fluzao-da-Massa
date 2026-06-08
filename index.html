@@ -8,18 +8,361 @@
   <link rel="shortcut icon" href="icons8-bola-de-futebol-2-16.png">
   <title>Fluzão da Massa</title>
   <link rel="stylesheet" href="style.css">
+</head>
 
-  <style>
-    /* ===== VARIÁVEIS DE TEMA ===== */
-    :root {
-      --bg-primary: #1a1a2e;
-      --bg-secondary: #16213e;
-      --bg-card: #0f3460;
-      --text-primary: #ffffff;
-      --text-secondary: #cccccc;
-      --accent: #8B0000;
-      --accent2: #c41e3a;
-      --nav-bg: #6b0f1a;
-      --table-bg: #0f3460;
-      --table-border: #8B0000;
-      --footer-bg: #6b0f1a;
+<body>
+
+  <nav>
+    <ul class="flex-wrap">
+      <li><a href="https://www.fluminense.com.br/site/" target="_blank">Página Oficial</a></li>
+      <li><a href="https://www.fluminense.com.br/ultimos-jogos" target="_blank">Tabela de Jogos</a></li>
+    </ul>
+    <button id="btn-tema" onclick="alternarTema()">
+      <span id="icone-tema">☀️</span>
+      <span id="texto-tema">Modo Claro</span>
+    </button>
+  </nav>
+
+  <section>
+    <h5 style="color: white; padding: 10px;">
+      Bem-vindo a esta página dedicada ao clube mais querido do Brasil: o Fluminense FC
+    </h5>
+  </section>
+
+  <div class="text-center px-2">
+    <video controls class="w-100" style="max-width:1200px;">
+      <source src="videoplayback.mp4" type="video/mp4">
+      <track kind="subtitles" srclang="pt-br" src="legenda-vídeo-fluminense.vtt" default>
+    </video>
+  </div>
+
+  <br>
+
+  <div class="text-center px-2">
+    <img src="./BANDEIRA_FLU.png" class="img-fluid" style="max-width:600px;">
+  </div>
+
+  <br><br>
+
+  <div class="text-center">
+    <audio controls>
+      <source src="HINO DO FLUMINENSE.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <h1 style="color: white;">FLUMINENSE FOOTBALL CLUB</h1>
+  <h2>Um dos clubes mais amados do Brasil</h2>
+
+  <p style="color: white;">
+    O Fluminense Football Club, fundado em 1902 e sediado no histórico bairro das Laranjeiras, é um dos clubes mais tradicionais e vitoriosos do futebol brasileiro. Conhecido como o "Tricolor das Laranjeiras", o clube ostenta uma rica história marcada por quatro títulos do Campeonato Brasileiro e, mais recentemente, a conquista da Copa Libertadores da América em 2023. Com uma das categorias de base mais produtivas do mundo, carinhosamente chamada de "Xerém", o Fluminense é reconhecido pela elegância de sua identidade visual e por uma torcida apaixonada que mantém viva a tradição do "pó de arroz".
+  </p>
+
+  <h3>Entre seus principais títulos e honrarias, estão:</h3>
+  <ul>
+    <li>Conmebol Libertadores (2023)</li>
+    <li>Recopa Sulamericana (2024)</li>
+    <li>Taça Olímpica (1949)</li>
+    <li>Copa Rio Internacional (1952)</li>
+    <li>Copa do Brasil (2007)</li>
+    <li>Campeonato Brasileiro (1970, 1984, 2010, 2012)</li>
+  </ul>
+
+  <br><br>
+
+  <section id="tabela">
+    <h2>Histórico</h2>
+    <div class="table-responsive">
+      <table>
+        <tr>
+          <th>Ano</th>
+          <th>Título</th>
+          <th>Competição</th>
+        </tr>
+        <tr>
+          <td>1970, 1984, 2010, 2012</td>
+          <td>Campeão</td>
+          <td>Brasileirão</td>
+        </tr>
+        <tr>
+          <td>2023</td>
+          <td>Campeão</td>
+          <td>Libertadores</td>
+        </tr>
+        <tr>
+          <td>2024</td>
+          <td>Campeão</td>
+          <td>Recopa Sulamericana</td>
+        </tr>
+        <tr>
+          <td>2007</td>
+          <td>Campeão</td>
+          <td>Copa do Brasil</td>
+        </tr>
+        <tr>
+          <td>1952</td>
+          <td>Campeão</td>
+          <td>Copa Rio Intercontinental</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <br><br>
+
+  <section id="galeria">
+    <h2>Galeria de Ídolos</h2>
+    <p style="text-align:center; font-size:0.9rem;">Clique no coração para favoritar seu ídolo! ❤️</p>
+    <div class="galeria">
+      <div class="jogador">
+        <img src="fred.jpg" class="img-fluid">
+        <p>Fred</p>
+        <button class="btn-favoritar" onclick="favoritar(this)">🤍 Favoritar</button>
+      </div>
+      <div class="jogador">
+        <img src="Thiago Silva.jpg" class="img-fluid">
+        <p>Thiago Silva</p>
+        <button class="btn-favoritar" onclick="favoritar(this)">🤍 Favoritar</button>
+      </div>
+      <div class="jogador">
+        <img src="germán cano.jpg" class="img-fluid">
+        <p>Germán Cano</p>
+        <button class="btn-favoritar" onclick="favoritar(this)">🤍 Favoritar</button>
+      </div>
+    </div>
+    <p id="contador-favoritos" style="text-align:center; margin-top:10px;">Você favoritou 0 ídolo(s).</p>
+  </section>
+
+  <br><br>
+
+  <section id="quiz">
+    <h2>Quiz: Você é tricolor de verdade?</h2>
+    <div id="quiz-section">
+      <p id="quiz-progresso">Pergunta 1 de 5</p>
+      <div id="quiz-pergunta-texto"></div>
+      <div id="quiz-opcoes"></div>
+      <div id="quiz-feedback"></div>
+      <div id="quiz-resultado" style="display:none;">
+        <h3 id="resultado-titulo"></h3>
+        <p id="resultado-descricao"></p>
+        <button onclick="iniciarQuiz()">Jogar novamente 🔄</button>
+      </div>
+    </div>
+  </section>
+
+  <br><br>
+
+  <div class="text-center">
+    <a href="https://www.instagram.com/fluminensefc/?hl=pt" target="_blank">
+      <button class="btn-instagram">Instagram do Fluzão</button>
+    </a>
+  </div>
+
+  <h4>Entre em Contato:</h4>
+  <form style="padding: 10px;" onsubmit="enviarFormulario(event)">
+    <label>Nome</label>
+    <input type="text" required style="width:100%;">
+    <label>E-mail:</label>
+    <input type="email" required style="width:100%;">
+    <label>Mensagem</label>
+    <textarea required style="width:100%;"></textarea>
+    <button class="btn-form" type="submit">Enviar</button>
+    <br><br>
+    <p>Termos de Uso</p>
+    <input type="checkbox" required>
+    <label>Aceito os Termos de Uso</label>
+    <p id="msg-sucesso" style="color:green; display:none; font-weight:bold;">
+      ✅ Mensagem enviada com sucesso!
+    </p>
+  </form>
+
+  <footer>Fluminense Football Club, 2026</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function alternarTema() {
+      const html = document.documentElement;
+      const temaAtual = html.getAttribute('data-theme');
+      const novoTema = temaAtual === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', novoTema);
+
+      const icone = document.getElementById('icone-tema');
+      const texto = document.getElementById('texto-tema');
+
+      if (novoTema === 'light') {
+        icone.textContent = '🌙';
+        texto.textContent = 'Modo Escuro';
+      } else {
+        icone.textContent = '☀️';
+        texto.textContent = 'Modo Claro';
+      }
+    }
+
+    let totalFavoritos = 0;
+
+    function favoritar(botao) {
+      const jafavoritado = botao.classList.contains('favoritado');
+
+      if (jafavoritado) {
+        botao.classList.remove('favoritado');
+        botao.textContent = '🤍 Favoritar';
+        totalFavoritos--;
+      } else {
+        botao.classList.add('favoritado');
+        botao.textContent = '❤️ Favoritado!';
+        totalFavoritos++;
+      }
+
+      document.getElementById('contador-favoritos').textContent =
+        'Você favoritou ' + totalFavoritos + ' ídolo(s).';
+    }
+
+    const perguntas = [
+      {
+        texto: 'Em que ano o Fluminense foi fundado?',
+        opcoes: ['1900', '1902', '1905', '1910'],
+        correta: 1
+      },
+      {
+        texto: 'Qual o apelido carinhoso da categoria de base do Fluminense?',
+        opcoes: ['Cantinho', 'Ninho', 'Xerém', 'Viveiro'],
+        correta: 2
+      },
+      {
+        texto: 'Em qual ano o Fluminense conquistou a Copa Libertadores da América?',
+        opcoes: ['2019', '2021', '2022', '2023'],
+        correta: 3
+      },
+      {
+        texto: 'Qual é o apelido do Fluminense?',
+        opcoes: ['Tricolor das Laranjeiras', 'Campeão da Vida', 'Gigante da Colina', 'Belo'],
+        correta: 0
+      },
+      {
+        texto: 'Como é chamada a tradicional torcida do Fluminense que usa pó de arroz no rosto?',
+        opcoes: ['Fiel', 'Nação Tricolor', 'Pó de Arroz', 'Grenal'],
+        correta: 2
+      }
+    ];
+
+    let perguntaAtual = 0;
+    let pontuacao = 0;
+    let respondida = false;
+
+    function iniciarQuiz() {
+      perguntaAtual = 0;
+      pontuacao = 0;
+      respondida = false;
+
+      document.getElementById('quiz-resultado').style.display = 'none';
+      document.getElementById('quiz-feedback').textContent = '';
+      document.getElementById('quiz-pergunta-texto').style.display = 'block';
+      document.getElementById('quiz-opcoes').style.display = 'block';
+      document.getElementById('quiz-progresso').style.display = 'block';
+
+      mostrarPergunta();
+    }
+
+    function mostrarPergunta() {
+      const p = perguntas[perguntaAtual];
+      respondida = false;
+
+      document.getElementById('quiz-progresso').textContent =
+        'Pergunta ' + (perguntaAtual + 1) + ' de ' + perguntas.length;
+      document.getElementById('quiz-pergunta-texto').textContent = p.texto;
+      document.getElementById('quiz-feedback').textContent = '';
+
+      const divOpcoes = document.getElementById('quiz-opcoes');
+      divOpcoes.innerHTML = '';
+
+      p.opcoes.forEach(function(opcao, index) {
+        const btn = document.createElement('button');
+        btn.textContent = opcao;
+        btn.onclick = function() { responder(index, btn); };
+        divOpcoes.appendChild(btn);
+        divOpcoes.appendChild(document.createElement('br'));
+      });
+    }
+
+    function responder(indice, btnClicado) {
+      if (respondida) return;
+      respondida = true;
+
+      const p = perguntas[perguntaAtual];
+      const botoes = document.querySelectorAll('#quiz-opcoes button');
+      const feedback = document.getElementById('quiz-feedback');
+
+      botoes.forEach(function(b) { b.disabled = true; });
+
+      if (indice === p.correta) {
+        feedback.textContent = '✅ Correto! Muito bem, tricolor!';
+        pontuacao++;
+      } else {
+        feedback.textContent = '❌ Errado! A resposta certa era: ' + p.opcoes[p.correta];
+      }
+
+      setTimeout(function() {
+        perguntaAtual++;
+        if (perguntaAtual < perguntas.length) {
+          mostrarPergunta();
+        } else {
+          mostrarResultado();
+        }
+      }, 1500);
+    }
+
+    function mostrarResultado() {
+      document.getElementById('quiz-pergunta-texto').style.display = 'none';
+      document.getElementById('quiz-opcoes').style.display = 'none';
+      document.getElementById('quiz-feedback').textContent = '';
+      document.getElementById('quiz-progresso').style.display = 'none';
+
+      document.getElementById('quiz-resultado').style.display = 'block';
+
+      const titulo = document.getElementById('resultado-titulo');
+      const descricao = document.getElementById('resultado-descricao');
+
+      if (pontuacao === 5) {
+        titulo.textContent = '🏆 Lenda Tricolor!';
+        descricao.textContent = 'Você acertou ' + pontuacao + '/5! Você é um verdadeiro torcedor do Fluminense!';
+      } else if (pontuacao >= 3) {
+        titulo.textContent = '⭐ Torcedor de respeito!';
+        descricao.textContent = 'Você acertou ' + pontuacao + '/5! Você conhece bem o Flu, mas ainda tem o que aprender!';
+      } else {
+        titulo.textContent = '📚 Precisa estudar mais!';
+        descricao.textContent = 'Você acertou ' + pontuacao + '/5. Que tal aprender mais sobre o Tricolor das Laranjeiras?';
+      }
+    }
+
+    iniciarQuiz();
+
+    const elementosAnimados = document.querySelectorAll('section, h1, h2, .galeria');
+
+    const observador = new IntersectionObserver(function(entradas) {
+      entradas.forEach(function(entrada) {
+        if (entrada.isIntersecting) {
+          entrada.target.style.opacity = '1';
+          entrada.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    elementosAnimados.forEach(function(el) {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observador.observe(el);
+    });
+
+    function enviarFormulario(event) {
+      event.preventDefault();
+      document.getElementById('msg-sucesso').style.display = 'block';
+      event.target.reset();
+      setTimeout(function() {
+        document.getElementById('msg-sucesso').style.display = 'none';
+      }, 5000);
+    }
+  </script>
+
+</body>
+</html>
