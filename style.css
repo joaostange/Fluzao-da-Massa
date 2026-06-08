@@ -116,6 +116,46 @@ section {
   flex-wrap: wrap;
 }
 
+[data-theme="light"] body {
+  background-image: none;
+  background-color: #f5f0eb;
+}
+
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] p,
+[data-theme="light"] ul,
+[data-theme="light"] form,
+[data-theme="light"] section {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] nav {
+  background: linear-gradient(
+    to bottom,
+    darkred 30%,
+    darkred 49.5%,
+    white 49.5%,
+    white 53.5%,
+    darkgreen 50.5%,
+    green 100%
+  );
+}
+
+[data-theme="light"] td,
+[data-theme="light"] th {
+  color: #1a1a1a;
+  border-color: darkred;
+}
+
+[data-theme="light"] footer {
+  background: darkred;
+  color: white;
+}
+
+
 .jogador {
   text-align: center;
   color: white;
