@@ -1,160 +1,191 @@
 body {
-background-image: url(https://i.pinimg.com/1200x/71/bd/5c/71bd5c6fdb78141975ec81ae1e62c2b1.jpg);
-margin: 0;
-padding: 0;
-text-align: center;
-background-size: cover;
-background-repeat: no-repeat;
+  background-image: url(https://i.pinimg.com/1200x/71/bd/5c/71bd5c6fdb78141975ec81ae1e62c2b1.jpg);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 img {
-justify-content: center;
-justify-items: center;
-padding-top: 50px;
-max-width: 100%;
-height: auto;
+  justify-content: center;
+  justify-items: center;
+  padding-top: 50px;
+  max-width: 100%;
+  height: auto;
 }
 
 h1 {
   font-family: 'Times New Roman', Times, serif;
-  font-size: clamp(32px, 8vw,);
+  font-size: clamp(32px, 8vw, 64px);
   text-align: center;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 h2 {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 50px;
-text-align: center;
-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 p {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 30px;
-text-align: center;
-padding-left: 25px;
-padding-right: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: white;
 }
 
 button {
-background-color: darkred;
-transition: 0.2ms;
-text-align: center;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 23px;
-color: white;
-margin: 10px;
+  background-color: darkred;
+  transition: 0.2s;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 23px;
+  color: white;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a00000;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 h3 {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 50px;
-color: white;
-text-align: justify;
-margin: 10px;
-padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 50px;
+  color: white;
+  text-align: justify;
+  margin: 10px;
+  padding: 20px;
 }
 
 h4 {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 50px;
-color: white;
-text-align: justify;
-margin: 10px;
-padding: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 50px;
+  color: white;
+  text-align: justify;
+  margin: 10px;
+  padding: 25px;
 }
 
 ul {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 30px;
-text-align: justify;
-color: white;
-margin: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  text-align: justify;
+  color: white;
+  margin: 10px;
 }
 
 ul a:hover {
-color: green;
+  color: green;
 }
 
 .btn-instagram {
-color: green;
-transition: transform 0.3s ease;
+  color: white;
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  transition: transform 0.3s ease;
+  border: none;
 }
 
 .btn-instagram:hover {
-transform: scale(1.15);
+  transform: scale(1.15);
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
 }
 
 section {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 50px;
-text-align: center;
-color: darkred;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: white;
 }
 
 .galeria {
-display: flex;
-gap: 20px;
-justify-content: center;
-flex-wrap: wrap;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .jogador {
-text-align: center;
-color: white;
+  text-align: center;
+  color: white;
 }
 
 .jogador img {
-width: 200px;
-height: auto;
-border-radius: 10px;
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
 }
 
 .jogador p {
-margin-top: 8px;
-font-size: 18px;
-font-weight: bold;
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .galeria img:hover {
-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 nav {
-margin: 0;
-height: 170px;
-background: linear-gradient(
-to bottom,
-darkred 30%,
-darkred 49.5%,
-white 49.5%,
-white 53.5%,
-darkgreen 50.5%,
-green 100%
-);
-padding: 15px;
-width: 100%;
-top: 0;
-left: 0;
-text-align: center;
+  margin: 0;
+  height: 170px;
+  background: linear-gradient(
+    to bottom,
+    darkred 30%,
+    darkred 49.5%,
+    white 49.5%,
+    white 53.5%,
+    darkgreen 50.5%,
+    green 100%
+  );
+  padding: 15px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
 }
 
 nav ul {
-margin: -5px;
-list-style: none;
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
+  margin: -5px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 nav ul li {
-margin: 20px;
+  margin: 20px;
 }
 
 nav ul li a {
-color: white;
-text-decoration: underline;
-font-size: 35px;
+  color: white;
+  text-decoration: underline;
+  font-size: 35px;
+}
+
+#btn-tema {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#btn-tema:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: none;
 }
 
 table {
@@ -164,88 +195,93 @@ table {
 }
 
 td, th {
-    font-size: clamp(12px, 3vw, 18px);
-color: white;
-border: 3px solid white;
-padding: 10px;
+  font-size: clamp(12px, 3vw, 18px);
+  color: white;
+  border: 3px solid white;
+  padding: 10px;
+}
+
+th {
+  background-color: darkred;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 form {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 30px;
-color: white;
-text-align: justify;
-margin: 10px;
-padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  color: white;
+  text-align: justify;
+  margin: 10px;
+  padding: 10px;
 }
 
 .btn-form:hover {
-transform: scale(1.15);
-transition: transform 0.3s ease;
+  transform: scale(1.15);
+  transition: transform 0.3s ease;
 }
 
 footer {
-background: darkred;
-padding: 20px;
-color: white;
+  background: darkred;
+  padding: 20px;
+  color: white;
 }
 
-/* RESPONSIVO PARA CELULAR */
 @media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
 
-h1 {
-font-size: 40px;
-}
+  h2 {
+    font-size: 28px;
+  }
 
-h2 {
-font-size: 28px;
-}
+  h3, h4 {
+    font-size: 26px;
+    text-align: center;
+  }
 
-h3, h4 {
-font-size: 26px;
-text-align: center;
-}
+  p {
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
-p {
-font-size: 18px;
-padding-left: 10px;
-padding-right: 10px;
-}
+  ul {
+    font-size: 18px;
+    text-align: left;
+  }
 
-ul {
-font-size: 18px;
-text-align: left;
-}
+  nav {
+    height: auto;
+    padding: 10px;
+  }
 
-nav {
-height: auto;
-padding: 10px;
-}
+  nav ul li {
+    margin: 10px;
+  }
 
-nav ul li {
-margin: 10px;
-}
+  nav ul li a {
+    font-size: 20px;
+  }
 
-nav ul li a {
-font-size: 20px;
-}
+  .jogador img {
+    width: 150px;
+  }
 
-.jogador img {
-width: 150px;
-}
+  table {
+    width: 100%;
+  }
 
-table {
-width: 100%;
-}
+  form {
+    font-size: 18px;
+  }
 
-form {
-font-size: 18px;
-}
-
-button {
-font-size: 18px;
-}
-
+  button {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 768px) {
